@@ -1,0 +1,38 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Vocabulary Builder</title>
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+<link href="https://fonts.googleapis.com/css2?family=Afacad+Flux:wght@100..1000&family=Anton+SC&family=Bungee+Tint&family=Poppins:ital,wght@0,100;0,200;0,300;0,400;0,500;0,600;0,700;0,800;0,900;1,100;1,200;1,300;1,400;1,500;1,600;1,700;1,800;1,900&family=Raleway:ital,wght@0,100..900;1,100..900&family=Sour+Gummy:ital,wght@0,100..900;1,100..900&display=swap" rel="stylesheet">
+    <link rel="stylesheet" href="styles.css">
+    <script src="app.js" defer></script>
+</head> 
+<body>
+    <main>
+        <section class="app-identity">
+            <div>
+                <h1 class="app-title">Vocabulary Builder</h1>
+                <p class="app-description">Your one stop web app for getting the meaning of unfamiliar english words.</p>
+            </div>
+        </section>
+
+        <section>
+           <div>
+                <form class="input-search-container">
+                    <input type="text" class="word text" placeholder="Search for a word">
+                    <input type="button" class="search" value="search" >
+                </form>
+           </div>
+            <div class="meaning-container">
+                <textarea type="text" class="meaning1 text" id="meaning1" placeholder="The meaning of the word will be displayed here" readonly></textarea>
+            </div>
+            <div class="button-container">
+                <input type="button" class="copy" value="Copy">
+            </div>
+        </section>
+    </main>
+</body>
+</html>
