@@ -2,6 +2,7 @@ const word = document.querySelector('.word');
 const searchBtn = document.querySelector('.search');
 const firstMeaning = document.querySelector('.meaning1');
 const copyBtn = document.querySelector('.copy');
+const overlay = document.querySelector('.loading-overlay');
 
 async function getMeaning(){
     try{
@@ -9,6 +10,7 @@ async function getMeaning(){
         if(!fetchData.ok){
             throw new Error(`Word was not found: ${fetchData.status}`);
         }
+        loadingScreen();
         const res = await fetchData.json();
         const meaning1 = res[0].meanings[0].definitions[0].definition;
         firstMeaning.value = meaning1;
@@ -29,6 +31,13 @@ function copyMeaning(){
 function changeCopyBtn(){
     copyBtn.value='copied';
     copyBtn.classList.add('copied');  
+}
+
+function loadingScreen(){
+    overlay.style.display = 'flex';
+    setTimeout(() => {
+      overlay.style.display = 'none';
+    }, 1500); 
 }
 
 searchBtn.addEventListener('click', getMeaning);
