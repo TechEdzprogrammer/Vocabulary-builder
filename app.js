@@ -18,8 +18,7 @@ async function getMeaning(){
         copyBtn.value='copy';
     }
     catch(error){
-        alert(`Something went wrong: ${error.message}`);
-        window.location.reload();
+        OnErrorReload(error);
     }
 }
 
@@ -38,6 +37,17 @@ function loadingScreen(){
     setTimeout(() => {
       overlay.style.display = 'none';
     }, 1500); 
+}
+
+function OnErrorReload(errorMsg){
+    alert(`Something went wrong: ${errorMsg.message}`);
+    overlay.style.display = 'flex';
+    setTimeout(() => {
+        overlay.style.display = 'none';
+    }, 1000);
+    setTimeout( () => {
+        window.location.reload();
+    },1000); 
 }
 
 searchBtn.addEventListener('click', getMeaning);
