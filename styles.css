@@ -15,7 +15,7 @@ body{
 .app-description{
     font: normal 400 12pt "Sour Gummy", sans-serif;
 }
-.copy{
+.copy,.clone-copy{
     background-color: aquamarine;
     color: brown;
     width: 15%;
@@ -35,7 +35,7 @@ body{
     width: 50%;
     margin-top: 3%;
 }
-.meaning1{
+.meaning1, .other-meaning{
   width: 45%;
   height: 5rem;
   padding: 2%;
@@ -70,6 +70,21 @@ body{
 .search{
     background-color: aqua;
     font: normal 400 15pt "Sour Gummy", sans-serif;
+}
+.more-definitions{
+    width: 100%;
+    display: flex;
+    justify-content: center;
+}
+.more-definitions-hidden{
+    width: 100%;
+    display: none;
+    justify-content: center;
+}
+.more-definitions-btn{
+    background-color: aqua;
+    font: normal 400 15pt "Sour Gummy", sans-serif;
+    margin-bottom: 10%;
 }
 
 .loading-overlay {
@@ -115,13 +130,13 @@ body{
     .search{
         font: normal 400 10pt "Sour Gummy", sans-serif;
     }
-    .meaning1{
+    .meaning1,.other-meaning{
         width: 60%;
         height: 5rem;
         font-size: 10pt;
         resize:none;
     }
-    .copy{
+    .copy,.clone-copy{
         background-color: aquamarine;
         color: brown;
         width: 15%;
